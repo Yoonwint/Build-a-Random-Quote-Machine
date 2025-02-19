@@ -1,0 +1,48 @@
+
+@import url('https://fonts.googleapis.com/css2?family=PT+Serif&family=Roboto&display=swap');
+
+
+body{
+    background-color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: 'PT Serif', serif;
+
+}
+div{
+    position: relative;
+    z-index:1;
+}
+#quote-box {
+    border-radius: 3px;
+    height : 260px;
+    width: 39vw;
+    background-color: #ffffff;
+}
+#text{
+    margin: 40px 20px 0 20px;
+    padding: 0;
+    text-align: center;
+    font-size:1.3em;
+}
+#block1{
+    display: flex;
+    float: right;
+    border: 1px solid red;
+    clear: both;
+    margin-top: 12px;
+    margin-right: 10px;
+    
+}
+#block2{
+    display: block;
+    border: 1px solid blue;
+    margin-top: 3.9rem;
+    position: absolute;
+}
+#text {
+    border: 1px solid pink;
+    margin:0;
+}

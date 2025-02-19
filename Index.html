@@ -1,0 +1,79 @@
+<html>
+    <head>
+        <meta ame="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="./style.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <script>
+            const randomQuote= [
+                {quote: "Our lives are never certain, even for an hour.",
+                 author:"Ferrant Sanchez Calavera"
+                },
+                {quote: "There are three ingredients in the good life: learning, earning and yearning.",
+                 author:"Christopher Morley"
+                },
+                {quote: "Time is a very shadow that passeth away.",
+                 author:"Apocrypha"
+                },
+                {quote: "Flowers grow out of dark moments.",
+                 author:"Corita Kent"
+                },
+                {quote: "Never eat more than you can lift.",
+                 author:"Miss Piggy"
+                },
+                {quote: "What you can't get out of, get into wholeheartedly.",
+                 author:"Mignon McLaughlin"
+                },
+                {quote: "Sadness flies away on the wings of time.",
+                 author:"Jean de la Fontaine"
+                },
+                {quote: "Prejudice is the child of ignorance.",
+                 author:"William Hazlitt"
+                },
+                {quote: "The English never draw a line without blurring it.",
+                 author:"Winston Churchill"
+                },
+                {quote: "The only way to entertain some folks is to listen to them.",
+                 author:"Kin Hubbard"
+                },
+                {quote: "If you want to go fast, go alone. If you want to go far, go together.",
+                 author:"African Proverb"
+                }
+            ];
+            window.onload =init;
+            function init(){
+                generateQuote()
+                
+            }
+            function generateQuote(){
+                let quoteNum = randomQuote.length;
+                let rondamNum = Math.floor(Math.random()*quoteNum);
+                let tweetLink="https://twitter.com/intent/tweet?text=quotegoeshere";
+                tweetLink += randomQuote[rondamNum].quote;
+                tweetLink+=randomQuote[rondamNum].author;
+                document.getElementById("tweet-quote").href = tweetLink;
+                document.getElementById("text").innerHTML = randomQuote[rondamNum].quote;
+                document.getElementById("author").innerHTML =randomQuote[rondamNum].author;
+            }
+            
+            
+        </script>
+        
+    </head>
+    <body>
+        <wrapper id="quote-box">
+            <div class="quote-symbol">
+                <i class="fa fa-quote-left"></i>
+            </div>
+            <div id="text"></div>
+            <div id="block1">
+                <span>-</span>
+                <div id="author"></div>
+            </div>
+            <div id="block2">
+                <button id="new-quote" onClick="generateQuote();">New Quote</button>
+                <a href="#" class="button" id="tweet-quote" target="_blank">Tweet Quote</a>
+            </div>
+        </wrapper>
+        <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+    </body>
+</html>
